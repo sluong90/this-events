@@ -16,8 +16,20 @@ function showInner(){
 }
 
 /*2) to each restaurant name that will show and hide (toggle) the secret menu item for that particular restaurant.*/
+var divElem1 = document.getElementsByClassName('name');
+for(var i = 0; i<divElem1.length; i++){
+    divElem1[i].addEventListener('click', showMenu);
 
+}
 
+function showMenu(){
+var getMenu = this.querySelectorAll('.menu')[0];
+if(getMenu.style.display === 'block'){
+    getMenu.style.display = 'none';
+}else{
+    getMenu.style.display = 'block'
+}
+}
 /*3) to the thumbs down icon that will add a count (counter) for each time the icon is clicked on.*/
 
 
